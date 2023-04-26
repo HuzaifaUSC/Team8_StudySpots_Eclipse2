@@ -16,6 +16,9 @@
 		$(function(){
 			$("#navbar").load("navbar.html");
 		});
+		$(function(){
+			$("#index").load();
+		});
 	</script>
 </head>
 <body>
@@ -23,8 +26,35 @@
 	</div>
 	<h1>Google Maps API Example</h1>
 	
+	<h1>Google Maps API Example</h1>
 	<div id="map"></div>
+	<script type="module">
+		import {Loader} from '@googlemaps/js-api-loader';
+
+		const loader = new Loader({
+			apiKey: 'AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s',
+			version: 'weekly',
+			libraries: ['places']
+		});
+
+		loader.load().then(() => {
+			// Set the coordinates for the center of the map
+			const myLatLng = {lat: 34.02127561489714, lng: -118.2866354425022};
+
+			// Create a map object and center it on the specified coordinates
+			const map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 12,
+				center: myLatLng
+			});
+
+			const marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'San Francisco'
+			});
+		});
+	</script>
 	
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s&callback=initMap"></script>
+	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s&callback=initMap"></script> -->
 </body>
 </html>
