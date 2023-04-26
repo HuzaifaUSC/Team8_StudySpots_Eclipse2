@@ -15,7 +15,7 @@
 </head>
 <body>
 <div id="navbar"></div>
-    		<form id="register" action ="#" method="post">
+    		<form id="login" action ="#" onsubmit="login(event)" method="get">
     			 <fieldset>
     				<legend>Login</legend>
     					<label for="email">Email:</label>
@@ -23,7 +23,7 @@
 		      			<input type="text" id="username" name="username" required>
 		      			<label for="password">Password:</label>
 		      			<input type="text" id="password" name="password" required>
-
+						<input type="submit" value="Submit" id="signup-submit">
     			</fieldset>
     		</form>  
 
