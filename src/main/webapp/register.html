@@ -12,37 +12,41 @@
 		$("#navbar").load("navbar.html");
 	});
 	</script>
+	<style>
+	form {
+	  width: 500px; /* Set the width of the form */
+	  margin: auto; /* Center the form horizontally */
+	  padding: 20px;
+	  background: white;
+	  border-radius: 10px;
+	  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+	  margin-top: 20vh
+	}
+	legend{
+		text-align: center;
+	}
+	</style>
 </head>
 <body>
 <div id="navbar"></div>
-    <div class = "form">
-    <div class="form-body">
-      <h1 class="form-title">Register</h1>
-    <div class="username">
-        <label class="form__label" for="firstName">First Name </label>
-        <input class="form__input" type="text" id="firstName" placeholder="First Name"/>
-    </div>
-    <div class="lastname">
-        <label class="form__label" for="lastName">Last Name </label>
-        <input  type="text" name="" id="lastName"  class="form__input"placeholder="LastName"/>
-    </div>
-    <div class="email">
-        <label class="form__label" for="email">Email </label>
-        <input  type="email" id="email" class="form__input" placeholder="Email"/>
-    </div>
-    <div class="password">
-        <label class="form__label" for="password">Password </label>
-        <input class="form__input" type="password"  id="password" placeholder="Password"/>
-    </div>
-    <div class="confirm-password">
-        <label class="form__label" for="confirmPassword">Confirm Password </label>
-        <input class="form__input" type="password" id="confirmPassword" placeholder="Confirm Password"/>
-    </div>
-</div>
-<div class="footer">
-    <button type="submit" class="btn" onClick="handleRegister()">Register</button>
-</div>
-</div>      
+    		<form id="register" action ="#" method="post">
+    			 <fieldset>
+    				<legend>Sign Up</legend>
+    					<label for="firstname">First Name:</label>
+		      			<input type="text" id="firstname" name="firstname" required>
+    					<label for="lastname">Last Name:</label>
+		      			<input type="text" id="lastname" name="lastname" required>
+    					<label for="email">Email:</label>
+		      			<input type="email" id="email" name="email" required>
+		      			<input type="text" id="username" name="username" required>
+		      			<label for="password">Password:</label>
+		      			<input type="text" id="password" name="password" required>
+		      			<label for="confirm-password">Confirm Password:</label>
+		      			<input type="text" id="confirm-password" name="confirmPassword" required>
+		      			<input type="submit" value="Submit" onClick = "#">
+
+    			</fieldset>
+    		</form>  
 
 
 </body>
