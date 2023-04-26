@@ -5,6 +5,19 @@
 	min-height: calc(100vh - 70px);
 }
 
+#map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 /* used https://www.youtube.com/watch?v=8kxYqoY2WwE&list=PL2rFahu9sLJ2QuJaKKYDaJp0YqjFCDCtN&index=6&ab_channel=GoogleMapsPlatform */
 .marker {

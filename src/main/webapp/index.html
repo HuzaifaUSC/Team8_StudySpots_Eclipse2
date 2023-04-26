@@ -1,60 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href = "login.css">
-	<script src="index.js"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s"></script>
-	<style>
-		#map {
-			height: 400px;
-			width: 100%;
-		}
-	</style>
-	<script>
+  <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>StudySpots</title>
+    <script>
 		$(function(){
 			$("#navbar").load("navbar.html");
 		});
-		$(function(){
-			$("#index").load();
-		});
 	</script>
-</head>
-<body>
-	<div id="navbar">
-	</div>
-	<h1>Google Maps API Example</h1>
-	
-	<h1>Google Maps API Example</h1>
-	<div id="map"></div>
-	<script type="module">
-		import {Loader} from '@googlemaps/js-api-loader';
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-		const loader = new Loader({
-			apiKey: 'AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s',
-			version: 'weekly',
-			libraries: ['places']
-		});
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+  	<div id="navbar"></div>
+    <div id="map"></div>
 
-		loader.load().then(() => {
-			// Set the coordinates for the center of the map
-			const myLatLng = {lat: 34.02127561489714, lng: -118.2866354425022};
-
-			// Create a map object and center it on the specified coordinates
-			const map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 12,
-				center: myLatLng
-			});
-
-			const marker = new google.maps.Marker({
-				position: myLatLng,
-				map: map,
-				title: 'San Francisco'
-			});
-		});
-	</script>
-	
-	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s&callback=initMap"></script> -->
-</body>
+    <!-- prettier-ignore -->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s", v: "weekly"});</script>
+  </body>
 </html>
