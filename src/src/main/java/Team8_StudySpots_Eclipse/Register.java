@@ -37,7 +37,7 @@ public class Register extends HttpServlet {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        System.out.println("made it here" + "fname=" + firstName);
 	        
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/USCStudySpots?user=root&password=root");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/USCStudySpots?user=root&password=cx3M1-lMp2R-JdnxK");
 	 
 	        String query = "INSERT IGNORE INTO Users (firstName, lastName, password, userEmail) VALUES (?, ?, ?, ?)";
 	        pst = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
