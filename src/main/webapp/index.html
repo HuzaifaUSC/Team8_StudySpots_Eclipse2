@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href = "login.css">
+	<script src="index.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s"></script>
+	<style>
+		#map {
+			height: 400px;
+			width: 100%;
+		}
+	</style>
+	<script>
+		$(function(){
+			$("#navbar").load("navbar.html");
+		});
+	</script>
+</head>
+<body>
+	<div id="navbar">
+	</div>
+	<h1>Google Maps API Example</h1>
+	
+	<div id="map"></div>
+	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpCVaKxl81vxeIZ7_-bpF7Zj_2x1vZ34s&callback=initMap"></script>
+</body>
+</html>
